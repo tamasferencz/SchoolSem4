@@ -47,7 +47,7 @@ ELSO ELOADAS
  
 	1. Tanitominta: parban mutatkoznak meg
 	2. Feladat: A cimke minel jobb becslese az inputbol, azaz h0(x) = y^ =(hullamosvonal) y
-        3. Becsuljuk meg az autok szamat egy adott varosban, ha ismerjuk a varos lakossaganak szamat (x - varos 	   lakossaga, y - autok szama a varosban)
+        3. Becsuljuk meg az autok szamat egy adott varosban, ha ismerjuk a varos lakossaganak szamat (x - varos lakossaga, y - autok szama a varosban n)
 	   Milyen hipotezisfugvenyt keresunk? - valamilyen linearis fuggveny
 					      - olyan meredekseget keresunk, ami optimalisan sok ontot kot ossze
 	4. Becsuljuk meg a kepeken lathato emberek eletkorat! 
@@ -56,7 +56,7 @@ ELSO ELOADAS
 	5. Felugyelet 2 fo feladata: 1. Regresszio ( Y = vegtelen)
 				      2. Klasszifikacio (Y < vegtelen)
 	6. Hogyan allapitjuk meg, hogy mennyire jo a becsles?
-		a. J - koltsegvetes segitsegevel (J: 0 -> R), megadja, hogy mennyire ter el a va				   lodi cimke es a becslesuk adott parameter ertek eseten.
+		a. J - koltsegvetes segitsegevel (J: 0 -> R), megadja, hogy mennyire ter el valodi cimke es a becslesuk adott parameter ertek eseten.
 		b. Egyszeru pelda koltsege: J(0) = |h0(x) - y|
 		c. Feladata: Minimalizalni a koltseget.
 	7. Alkalmazasai:
@@ -69,7 +69,7 @@ ELSO ELOADAS
 		b. A cimkezett adat eloallitasa nagy merteku human munkat igenyelhet.
 
 - Felugyeletlen tanulas:
-	Nincs címkézett adat, és a modellnek magának kell feltárnia az adatban rejlő mintázatokat vagy struktúrá	kat.
+	Nincs címkézett adat, és a modellnek magának kell feltárnia az adatban rejlő mintázatokat vagy struktúrákat.
 
 	1. Cimke hianyaban a feladat nem egyertelmu.
 	2. Klaszterezes:
@@ -87,7 +87,7 @@ ELSO ELOADAS
 	   nyelvi feladatokon.
 
 - Megerositeses tanulas:
-	A modell egy környezettel interakcióba lépve tanul. A cél, hogy a modell az általa végrehajtott művelete	k alapján jutalmat vagy büntetést kapjon, és ezen keresztül optimalizálja a döntéseit.
+	A modell egy környezettel interakcióba lépve tanul. A cél, hogy a modell az általa végrehajtott műveletek alapján jutalmat vagy büntetést kapjon, és ezen keresztül optimalizálja a döntéseit.
 
 	1. A termeszetes inteligencia ritkan talalkozik felugyelt tanulasi feladatokkal
 	2. Gyakoribb: Csavargunk a vilagban es pozitiv/negativ visszacsatolast kapunk
