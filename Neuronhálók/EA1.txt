@@ -1,0 +1,97 @@
+ELSO ELOADAS
+
+- 50% elmelet, 50% gyakorlat
+- hazifeladatok, zarthelyik
+- A félév során a hallgatók megismerkednek a mesterséges neuronhálókhoz kötődő alapszintű elmélettel,
+  megismerik a legfontosabb hálóarchitektúrákat és gépi tanulási algoritmusokat, valamint elsajátítják
+  néhány népszerű, mélytanulási modellek implementálására alkalmazott szoftvercsomag használatát.
+  
+  	A félév tematikája röviden:
+
+- Felügyelt tanulás fogalma, hipotézis, költség, gradiens módszer
+- Egyszerű modellek regresszióra és klasszifikációra: a lineáris és logisztikus regresszió
+- Mesterséges neuron és Multilayer Perceptron modell, aktivációs függvények, a XOR-probléma
+- Alultanulás/túltanulás és felismerésük, early stopping, hiperparaméterek, validáció
+- A túltanulás elkerülése: adat-augmentáció, zajosítás, dropout
+- Számítási gráfok és a backpropagation algoritmus, az automatikus deriválás megvalósítása a
+  TensorFlow/PyTorch könyvtárakban
+- Neuronhálók képfeldolgozásra, konvolúciós réteg, pooling, LeNet-5 modell
+- Az instabil gradiens probléma és kezelése: batch normalization és reziduális hálók
+- Mélyhálók számítógépes látási feladatokban, transfer learning
+- Felügyeletlen tanulás fogalma és feladatai, autoencoder használata tömörítésre és zajtalanításra
+- Vektorizált programozás elsajátítása a NumPy könyvtár segítségével
+- MLP típusú és konvolúciós neuronháló megvalósítása a PyTorch könyvtár segítségével
+
+	Kovetelmenyek
+
+- 2 kotelezo hazi feladat (NumPy, PyTorch)
+- 2 geptermi ZH (NumPy, PyTorch)
+- Szobeli vizsga (Eloadas teteleibol, kb. 10 db)
+
+	Ora anyaga
+
+- Lenyege: 1. A feladatot megtanuljuk megoldani, anelkul, hogy a megoldas konkret algoritmust 
+	   2. Mintapeldak segitsegevel adjuk meg, hogy mi a feladat helyes megoldasa
+- Motivacio: 1. Kozelitoen optimalis megoldas is megfelelo
+	     2. Ha nem letezik optimalis algoritmus lefejleszteni a feladatot
+	     3. Ha nem ismert konkret/gazdasagos algoritmus a feladat megoldasahoz
+	     4. Nincs formalis definicio, tehat peldakat kell mutassunk (pl. kutya - tobb fajtaja lehet)
+- Mire nem alkalmazhato? 1. Hatekony megoldasa ismert
+			 2. Ha kozelito eredmeny nem megfelelo
+			 Pelda: rendezes
+-Gepi tanulas 3 fobb csoportja: 1. Felugyelet tanulas
+			        2. Felugyeletlen tanulas
+			        3. Megerositeses tanulas
+- Felugyelet tanulas:
+	A modellnek címkézett adatokat adunk, vagyis minden bemenethez tartozik egy ismert válasz (címke)
+ 
+	1. Tanitominta: parban mutatkoznak meg
+	2. Feladat: A cimke minel jobb becslese az inputbol, azaz h0(x) = y^ =(hullamosvonal) y
+        3. Becsuljuk meg az autok szamat egy adott varosban, ha ismerjuk a varos lakossaganak szamat (x - varos 	   lakossaga, y - autok szama a varosban)
+	   Milyen hipotezisfugvenyt keresunk? - valamilyen linearis fuggveny
+					      - olyan meredekseget keresunk, ami optimalisan sok ontot kot ossze
+	4. Becsuljuk meg a kepeken lathato emberek eletkorat! 
+	   (x - egy portre, y - a fenykepeken lathato szemely eletkora). 
+	    Mi a hipotezisfuggvenye? - valamilyen neuronhalo
+	5. Felugyelet 2 fo feladata: 1. Regresszio ( Y = vegtelen)
+				      2. Klasszifikacio (Y < vegtelen)
+	6. Hogyan allapitjuk meg, hogy mennyire jo a becsles?
+		a. J - koltsegvetes segitsegevel (J: 0 -> R), megadja, hogy mennyire ter el a va				   lodi cimke es a becslesuk adott parameter ertek eseten.
+		b. Egyszeru pelda koltsege: J(0) = |h0(x) - y|
+		c. Feladata: Minimalizalni a koltseget.
+	7. Alkalmazasai:
+		a. Objektumdetektalas, kepszegmentalas
+		b. 2D/3D human pozbecsles fenykeprol
+		c. Termeszetesnyelv-feldolgozas(NPL), erzelmi analizis
+		d. Gepi forditas
+	8. Problemaja: 
+		a. Termeszetes intelligencia altalaban nem szorul ra konkret input-output parok jelenletere, ahh		   oz, hogy tanuljon.
+		b. A cimkezett adat eloallitasa nagy merteku human munkat igenyelhet.
+
+- Felugyeletlen tanulas:
+	Nincs címkézett adat, és a modellnek magának kell feltárnia az adatban rejlő mintázatokat vagy struktúrá	kat.
+
+	1. Cimke hianyaban a feladat nem egyertelmu.
+	2. Klaszterezes:
+		a. Marketing, celzott reklam
+		b. Klasszikus computer vision, pl. kepszegmentalas
+		c. Anomalia detektalas
+	3. Tomorites / dimenziocsokkentes
+		a. pl. egy adott kep blurositese, azaz veszteseges(pixel) kepet allitson elo
+		b. Motivacio: kevesebb tarhely
+	4. Zajszures pl. kepeknel hianyzo darab helyreallitasa
+	5. Pelda feladat - Peldagenerealas: egy adott feladathoz hasonlo feladatmintat generaljon
+	6. Interaktiv zajszures, mint generativ modell
+	7. Zajszures / kovetezo token becslese
+	8. Nagy nyelvi modellek: Felugyeletlen betanitas rengeteg adaton, majd finomhangolas reszben felugyelt 
+	   nyelvi feladatokon.
+
+- Megerositeses tanulas:
+	A modell egy környezettel interakcióba lépve tanul. A cél, hogy a modell az általa végrehajtott művelete	k alapján jutalmat vagy büntetést kapjon, és ezen keresztül optimalizálja a döntéseit.
+
+	1. A termeszetes inteligencia ritkan talalkozik felugyelt tanulasi feladatokkal
+	2. Gyakoribb: Csavargunk a vilagban es pozitiv/negativ visszacsatolast kapunk
+		      Az agens megfigyeli a kornyezet allapotat (pl. automata porszivo)
+	3. Ritka jutalmak(pl. sakkjatszmanal a jatek vegen tudjuk meg hogy kapunk-e negativ/pozitiv jutalmat)
+	4. Magyarazhatosag gyengesege, azaz tanult/"atelt" helyzetek alapjan mont valaszt(pl. lovak - mezoben, 
+	   uton, asztal alatt)
