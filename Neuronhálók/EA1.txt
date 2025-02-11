@@ -30,7 +30,7 @@ ELSO ELOADAS
 
 	Ora anyaga
 
-- Lenyege: 1. A feladatot megtanuljuk megoldani, anelkul, hogy a megoldas konkret algoritmust 
+- Lenyege: 1. A feladatot megtanuljuk megoldani, anelkul, hogy a megoldas konkret algoritmus legyen 
 	   2. Mintapeldak segitsegevel adjuk meg, hogy mi a feladat helyes megoldasa
 - Motivacio: 1. Kozelitoen optimalis megoldas is megfelelo
 	     2. Ha nem letezik optimalis algoritmus lefejleszteni a feladatot
@@ -93,5 +93,5 @@ ELSO ELOADAS
 	2. Gyakoribb: Csavargunk a vilagban es pozitiv/negativ visszacsatolast kapunk
 		      Az agens megfigyeli a kornyezet allapotat (pl. automata porszivo)
 	3. Ritka jutalmak(pl. sakkjatszmanal a jatek vegen tudjuk meg hogy kapunk-e negativ/pozitiv jutalmat)
-	4. Magyarazhatosag gyengesege, azaz tanult/"atelt" helyzetek alapjan mont valaszt(pl. lovak - mezoben, 
+	4. Magyarazhatosag gyengesege, azaz tanult/"atelt" helyzetek alapjan mond valaszt(pl. lovak - mezoben, 
 	   uton, asztal alatt)

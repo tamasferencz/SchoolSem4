@@ -1,0 +1,49 @@
+- LESZ KOD? Nem, de canvas kviz lesz helyette
+
+	Java
+
+- Statikus, +dinamikus tipusrendszer
+- C-alapu szintaxis
+- Objektumelvu
+- Konnyu/olcso
+- Gazdag infrastruktura(dokumentacio, kiterjesztesek, Eszkozok)
+- Platformfuggetlenseg(JVM)
+- Eroforrasintenziv, vaszont hatekonyabb, mint pl a Python es kozelit a C hatekonysagahoz
+
+	Java Virtual Machine
+
+- Alacsonyszintu nyelv: bajtkod
+- Sok nyelv fordithato ra(Ada, Kotlin, Scala)
+- Tovabbfordithato: Just In Time(JIT)
+- Dinamikus szerkesztes
+- Kodmobilitas: Portolhato
+
+i++ - A for ciklusban eloszor az i erteket veszi, majd megnoveli 1-el
+++i - A for ciklusban eloszor megnoveli az i-t 1-el, majd felhasznalja az i-t
+
+- Osztalybol egy instans = objektum
+- Minden objektum a heep-en tarolodik (olyan mint a C malloc-ja)
+- Point p = new Point() // p referencia
+	Java program felepitese
+
+1. Modul
+2. Csomag
+3. Osztaly
+4. Tag
+   a. Adattag
+   b. Metodus
+
+	Java Forasfajl
+
+- Osztalynev
+- .java kiterjesztes
+- Forditasi egyseg
+- Csomagjanak megfelelo konyvtarban
+- Karakterkodolas
+
+	Minta futtatas
+
+1. javac HelloWorld.java
+2. java HelloWorld
+
+
