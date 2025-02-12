@@ -1,1 +1,34 @@
+	Internet
 
+- 30 milliard eszkoz
+- upstream: kisebb savszelesseg
+- downstream: nagyobb savszelesseg(userek altalaban letolteni fognak nem feltolteni)
+- Europa -> USA -> Azsia, minthogy Europa -> Azsia
+- Netsemlegesseg: Az internet szolgaltato szabadon eldotheti-e, hogy mely forgalmakat lassitja? - NEM, van Net    Neutrality Rules
+- Kinek kell fizetni az Internet kapcsolatert? Netflix fizet Cogent, Level 3, Tata szolgaltatoknak, majd a Comcast ingyen megkapja az adatokat, viszont nem kap profitot, majd a Comcast kiszolgaltatja az ugyfeleknek. Az elejen igy volt aztan a Comcastnak fizetett a Netflix is, mert minden feleloseg a Comcastra harult
+
+	Kovetelmenyek
+
+- A vizsga előfeltétele a legalább elégséges gyakorlati jegy.
+- Jelenléti írásbeli és szóbeli vizsga. Segédanyag nem használható!
+- A vizsga az egész féléves anyagra épülő elméleti és gyakorlati feladatokból összeállított kérdéssor kitöltését jelenti. A vizsga időtartama kb. 60-120 perc.
+- 3 részből áll:
+	Angol nyelvű szakkifejezések teszt (20 kérdés): min. 50% megléte szükséges, pontot nem ér
+	Teszt (60 kérdés): 60 pont – 60 perc – min. 30 pont – megajánlott 2-es és 3-as jegy szerezhető
+	Szóbeli rész: megajánlott jegy javítható, de lerontható is. 4-es és 5-ös jegyek csak szóbelivel szerezhetők!
+- A teszt esetén 50% minimum követelménnyel! Új feladatsor készül!
+-A féléves anyag a fóliákon is szereplő fogalmakat, összefüggéseket és a belőlük levonható következtetéseket jelenti.
+- Teszt értékelése:
+	[75%,   100%) – megajánlott közepes(3), ami szóbelivel javítható, de rontható is
+	[50%,   75%) – megajánlott elégséges(2), ami szóbelivel javítható, de rontható is
+	[  0%,   50%) – elégtelen(1)
+
+	Fobb kerdesek
+
+- Cimzes
+- Retegek
+- Forgalomiranyitas(routing)
+- Megbizhatosag
+- Eroforras megosztas
+
+- Linkek: a vegpontokat kapcsoljak
