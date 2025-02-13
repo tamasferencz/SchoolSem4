@@ -1,0 +1,2 @@
+- b.java abba bele kell irni a maint, es valamilyen adatot bekerni meg kiiratni, majd futtatni
+HF - mivel lehet futtatni fakt 50-et
