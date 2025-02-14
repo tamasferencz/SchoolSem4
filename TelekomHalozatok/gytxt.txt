@@ -1,0 +1,5 @@
+	Kovetelmeny
+
+- Python, socket beadandok(kb.4)- 50% eleres(TMS rendszer)
+- Python, socket ZH (50% eleres)
+- Mininet nagybeadando (50% eleres) - Routing, tuzfal, IP cim beallitasok
