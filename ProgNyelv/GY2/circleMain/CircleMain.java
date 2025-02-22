@@ -1,10 +1,12 @@
+package circleMain;
+
+import circle.Circle;
+
 public class CircleMain {
     public static void main(String[] args) {
 
         Circle c = new Circle();
-        c.x = 2;
-        c.y = 2;
-        c.radius = 4;
+        c.setXYR(2, 2, 4);
 
         c.printCircle();
 

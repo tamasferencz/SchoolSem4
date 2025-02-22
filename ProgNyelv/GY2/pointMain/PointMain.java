@@ -1,9 +1,14 @@
+package pointMain;
+
+import point.Point;
+import point.Point2;
+
 public class PointMain {
     public static void main(String[] args) {
         Point p = new Point();
 
-        p.x = 1;
-        p.y = 2;
+        p.setX(1);
+        p.setY(2);
         p.printPoint();
         p.move(2, 3);
         p.printPoint();
@@ -14,11 +19,11 @@ public class PointMain {
         Point2 p2 = new Point2();
         Point2 p3 = new Point2();
 
-        p2.x = 1;
-        p2.y = 1;
+        p2.setX(1);
+        p2.setY(1);
 
-        p3.x = 5;
-        p3.y = 5;
+        p3.setX(5);
+        p3.setY(5);
 
         System.out.print("P2 = ");
         p2.printPoint();

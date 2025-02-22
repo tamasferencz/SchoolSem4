@@ -1,8 +1,16 @@
+package circle;
+
 public class Circle {
 
-    public double x = 0.0;
-    public double y = 0.0;
-    public double radius = 0.0;
+    public double x;
+    public double y;
+    public double radius;
+
+    public void setXYR(double dx, double dy, double dr) {
+        this.x = dx;
+        this.y = dy;
+        this.radius = dr;
+    }
 
     public void enlarge(double f) {
         this.radius *= f;

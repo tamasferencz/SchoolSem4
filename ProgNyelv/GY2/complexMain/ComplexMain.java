@@ -1,3 +1,7 @@
+package complexMain;
+
+import complex.Complex;
+
 public class ComplexMain {
     public static void main(String[] args) {
 
@@ -19,8 +23,8 @@ public class ComplexMain {
 
         c1.sub(c2);
         c1.printComplex();
-	
-	c1.conjugate();
-	c1.reciprocate();
+
+        c1.conjugate();
+        c1.reciprocate();
     }
 }
