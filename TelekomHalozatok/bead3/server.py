@@ -76,4 +76,8 @@ with socket(AF_INET, SOCK_STREAM) as server:
                         s.sendall(packer.pack('K'.encode(), 0))
                     else:
                         s.sendall(packer.pack('V'.encode(),0))
-                        
+            inputs = [server]
+            clients.clear()
+            number = random.randint(1, 100)
+            game_over = False
+            print(f"Új játék kezdődik, a szám: {number}")
