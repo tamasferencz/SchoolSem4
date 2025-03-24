@@ -38,14 +38,9 @@ with socket(AF_INET, SOCK_STREAM) as client:
         op, _ = unpacker.unpack(response)
         op = op.decode()
 
-        if op == 'Y':
-            print(f"Nyertél! A szám {mid} volt.")
-            break
-        elif op == 'K':
-            print("Kiestél! Nem találtad ki a számot.")
-            break
-        elif op == 'V':
-            print("A játék véget ért.")
+        if op in ['Y', 'K', 'V']:
+            print(f"A játék véget ért: {op}")
+            client.close()
             break
         elif op == 'N':
             packed_data = packer.pack(('>' if mid < high else '<').encode(), mid)

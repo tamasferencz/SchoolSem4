@@ -46,9 +46,6 @@ with socket(AF_INET, SOCK_STREAM) as server:
 
                     if game_over:
                         s.sendall(packer.pack('V'.encode(), 0))
-                        inputs.remove(s)
-                        s.close()
-                        del clients[s]
                         continue
 
                     if op == '=':
@@ -77,12 +74,6 @@ with socket(AF_INET, SOCK_STREAM) as server:
             for s in inputs[1:]:
                     if clients[s]["state"] != 'Y':
                         s.sendall(packer.pack('K'.encode(), 0))
-                        time.sleep(5)
-                        s.close()
-                        print(f"Lecsatlakozott: {clients[s]['address']}")
+                    else:
+                        s.sendall(packer.pack('V'.encode(),0))
                         
-            inputs = [server]
-            clients.clear()
-            number = random.randint(1, 100)
-            game_over = False
-            print(f"Új szám: {number}")
