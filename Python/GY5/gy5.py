@@ -1,3 +1,4 @@
+"""task 5.2"""
 class Stack:
     def __init__(self):
         self.__stk = []
@@ -27,6 +28,7 @@ for i in range(100):
     stk.pop()
 print(stk.get_counter())
 
+"""task 5.3"""
 
 class QueueError(Exception):
     pass
@@ -54,6 +56,9 @@ try:
 except:
     print("Queue error")
     
+    
+"""task 5.4"""
+
 import math
 
 class Point:
