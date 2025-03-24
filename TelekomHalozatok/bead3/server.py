@@ -21,7 +21,6 @@ with socket(AF_INET, SOCK_STREAM) as server:
     inputs = [server]
     clients = {}
     number = random.randint(1, 100)
-    print(f"A kitalálandó szám: {number}")
     game_over = False
 
     while True:
@@ -78,8 +77,10 @@ with socket(AF_INET, SOCK_STREAM) as server:
             for s in inputs[1:]:
                     if clients[s]["state"] != 'Y':
                         s.sendall(packer.pack('K'.encode(), 0))
-                    time.sleep(5)
-                    s.close()
+                        time.sleep(5)
+                        s.close()
+                        print(f"Lecsatlakozott: {clients[s]['address']}")
+                        
             inputs = [server]
             clients.clear()
             number = random.randint(1, 100)
