@@ -1,9 +1,8 @@
 from socket import socket, AF_INET, SOCK_STREAM, SOL_SOCKET, SO_REUSEADDR
 import struct
-import time
-import random
 import select
 import sys
+import random
 
 bind_address = sys.argv[1]
 bind_port = int(sys.argv[2])
@@ -30,8 +29,15 @@ with socket(AF_INET, SOCK_STREAM) as server:
             if s is server:
                 client, client_addr = server.accept()
                 print(f"Csatlakozott: {client_addr}")
+
+                if game_over:
+                    client.sendall(packer.pack('V'.encode(), 0))
+                    print(f"Kliens ({client_addr}) későn csatlakozott, 'V' üzenetet kapott, bontás...")
+                    continue
+
                 inputs.append(client)
                 clients[client] = {"state": None, "address": client_addr}
+
             else:
                 try:
                     data = s.recv(unpacker.size)
@@ -46,6 +52,9 @@ with socket(AF_INET, SOCK_STREAM) as server:
 
                     if game_over:
                         s.sendall(packer.pack('V'.encode(), 0))
+                        s.close()
+                        inputs.remove(s)
+                        del clients[s]
                         continue
 
                     if op == '=':
@@ -53,6 +62,7 @@ with socket(AF_INET, SOCK_STREAM) as server:
                             clients[s]["state"] = 'Y'
                             s.sendall(packer.pack('Y'.encode(), 0))
                             game_over = True
+                            print(f"Nyertes: {clients[s]['address']} ({guess})")
                         else:
                             clients[s]["state"] = 'N'
                             s.sendall(packer.pack('N'.encode(), 0))
@@ -69,15 +79,18 @@ with socket(AF_INET, SOCK_STREAM) as server:
                     inputs.remove(s)
                     s.close()
                     del clients[s]
-
+        
         if game_over:
-            for s in inputs[1:]:
-                    if clients[s]["state"] != 'Y':
-                        s.sendall(packer.pack('K'.encode(), 0))
+            for s in list(clients.keys()):
+                try:
+                    addr = clients[s]['address']
+                    if clients[s]["state"] == 'Y':
+                        result = "nyert"
                     else:
-                        s.sendall(packer.pack('V'.encode(),0))
-            inputs = [server]
-            clients.clear()
-            number = random.randint(1, 100)
-            game_over = False
-            print(f"Új játék kezdődik, a szám: {number}")
+                        if clients[s]["state"] != 'K':
+                            s.sendall(packer.pack('K'.encode(), 0))
+                            clients[s]["state"] = 'K'
+                            print(f"Kliens kilép: {addr} (vesztett)")
+                except (ConnectionError, KeyError):
+                    continue
+

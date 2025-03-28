@@ -1,3 +1,5 @@
+package text.to.numbers;
+
 import static check.CheckThat.*;
 import static check.CheckThat.Condition.*;
 import org.junit.jupiter.api.*;
@@ -7,7 +9,7 @@ public class SingleLineFileStructureTest {
     @BeforeAll
     public static void init() {
         CheckThat.theClass("text.to.numbers.SingleLineFile")
-            .thatIs(FULLY_IMPLEMENTED, INSTANCE_LEVEL, VISIBLE_TO_ALL);
+                .thatIs(FULLY_IMPLEMENTED, INSTANCE_LEVEL, VISIBLE_TO_ALL);
     }
 
     @Test
@@ -18,8 +20,7 @@ public class SingleLineFileStructureTest {
     @Test
     public void methodAddNumbers() {
         it.hasMethod("addNumbers", withParams("String"))
-            .thatIs(FULLY_IMPLEMENTED, USABLE_WITHOUT_INSTANCE, VISIBLE_TO_ALL)
-            .thatReturns("int");
+                .thatIs(FULLY_IMPLEMENTED, USABLE_WITHOUT_INSTANCE, VISIBLE_TO_ALL)
+                .thatReturns("int");
     }
 }
-

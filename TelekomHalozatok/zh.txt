@@ -1,0 +1,6 @@
+1.feladat: TCP Kliens (meg lesz adva tcp szerver obf(nem lathato a szerver tartalma, de futtathato))
+2.feladat: UDP Kliens (meg lesz adva tcp szerver obf)
+
+3.feladat: TCP/UDP szerver  (meg lesz adva kliens obf)
+
+4.feladat: Proxyt kell irni (meg lesz adva egy hibas proxy) (meg lesz adva a kliens es szerver)

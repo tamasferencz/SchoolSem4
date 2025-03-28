@@ -16,11 +16,22 @@ with socket(AF_INET, SOCK_STREAM) as client:
     client.connect(server_addr)
     client.settimeout(5.0)
 
+    readable, _, _ = select.select([client], [], [], 2.0)
+    if readable:
+        response = client.recv(unpacker.size)
+        if response:
+            op, _ = unpacker.unpack(response)
+            op = op.decode()
+            if op == 'V':
+                print("A játék már véget ért, kilépés...")
+                client.close()
+                sys.exit(0)
+
     while low <= high:
         mid = (low + high) // 2
         print(f"Tippelt szám: {mid}")
 
-        time.sleep(random.uniform(1, 5))
+        time.sleep(2)
 
         packed_data = packer.pack('='.encode(), mid)
         client.sendall(packed_data)
