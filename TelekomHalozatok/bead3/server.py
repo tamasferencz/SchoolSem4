@@ -57,7 +57,7 @@ with socket(AF_INET, SOCK_STREAM) as server:
                         del clients[s]
                         continue
 
-                    if op == '=':
+                    if op == '=': #???????
                         if guess == number:
                             clients[s]["state"] = 'Y'
                             s.sendall(packer.pack('Y'.encode(), 0))
@@ -65,7 +65,7 @@ with socket(AF_INET, SOCK_STREAM) as server:
                             print(f"Nyertes: {clients[s]['address']} ({guess})")
                         else:
                             clients[s]["state"] = 'N'
-                            s.sendall(packer.pack('N'.encode(), 0))
+                            s.sendall(packer.pack('N'.encode(), 0)) # K
                     elif op == '<':
                         response = 'I' if number < guess else 'N'
                         clients[s]["state"] = response
