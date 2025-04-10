@@ -1,0 +1,28 @@
+PROJECT NAME:
+    Hangman Game using Tkinter
+
+DESCRIPTION:
+
+    This project is a digital version of the classic Hangman word guessing game,
+    developed using Python and its Tkinter library for GUI creation.
+    The objective is to guess a hidden word by suggesting letters within a limited number
+    of attempts. The interface includes a graphical representation of the hangman being
+    drawn with each wrong guess, a display for the guessed word, input functionality for
+    guessing letters, and messages that guide or inform the player. The game automatically
+    resets upon winning or losing, allowing for continuous play.
+
+KEY POINTS:
+
+    - GUI-based word guessing game using Python's Tkinter library.
+    - Randomly selects words from a predefined list. (editable)
+    - Displays correct guesses and tracks wrong guesses separately.
+    - Draws the hangman step-by-step as incorrect guesses increase.
+    - Includes input validation and user feedback.
+    - Automatically restarts on win or loss after a short delay.
+    - Clean and simple user interface with a canvas for hangman drawing.
+
+STACKS:
+
+    - Programming Language: Python
+    - GUI Library: Tkinter
+    - Concepts Used: Object-Oriented Programming, Randomization, GUI Handling, Event Binding, Canvas Drawing

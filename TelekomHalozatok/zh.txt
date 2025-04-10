@@ -4,3 +4,6 @@
 3.feladat: TCP/UDP szerver  (meg lesz adva kliens obf)
 
 4.feladat: Proxyt kell irni (meg lesz adva egy hibas proxy) (meg lesz adva a kliens es szerver)
+
+host: oktnb147.inf.elte.hu
+port: 11224

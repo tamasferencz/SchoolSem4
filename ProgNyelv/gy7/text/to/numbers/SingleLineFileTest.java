@@ -9,6 +9,11 @@ import org.junit.jupiter.params.*;
 import org.junit.jupiter.params.provider.*;
 import check.*;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+
 public class SingleLineFileTest {
     private static final String TEST_FILE = "testfile.txt";
 
